@@ -1,0 +1,355 @@
+/* globas classes */
+
+html body {
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  font-family: var(--roboto);
+  padding-top: 50px;
+
+}
+
+/* CSS Variables */ 
+
+:root{
+  --primary-color: rgb(116, 164, 206);
+  --title-color: #141313;
+  --text-color: #777777;  
+  --border-color: #201f1f17;  
+  --gradient-color: linear-gradient(90deg, #6893c6 0%, #adbbc9 100%);
+  --gradient-color2: linear-gradient(90deg, #fafafa 0%, #a9bbcd 100%);
+  --shadow-color:  0px 10px 30px rgba(118, 85, 225, 0.3);
+  --box-shadow: 0px 10px 30px rgba(57, 56, 61, 0.205);
+ 
+  /* font family variables. */ 
+  --roboto: 'Roboto', Arial, sans-serif;
+} 
+
+/* @font-face */
+
+@font-face {
+  font-family: 'Roboto', Arial, sans-serif;
+  src: "../fonts/Roboto/Roboto-Regular.ttf";
+}
+
+/*Buttons*/
+
+.button{
+  padding: 10px 50px 10px 50px;
+  width: 227px;
+  font: normal 500 16px/20px var(--roboto) ;
+  position: relative;
+  border: 3px solid transparent;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+.button.primary-button{
+  background: var(--gradient-color);
+  background-clip: padding-box;
+  color: whitesmoke;
+  transition: background .6s ease;
+  box-shadow: var(--box-shadow);
+  border: none;
+  margin-top: 5px;
+}
+
+.button.primary-button:hover{
+  background: whitesmoke;
+  background-clip: padding-box;
+  color: black;
+}
+
+button.secondary-button{
+  background-color: rgb(179, 207, 244);
+  background-clip: padding-box;
+  color: black;
+  transition: background .6s ease;
+  border: solid 1px;
+  margin-top: 5px;
+}
+
+.button.secondary-button{
+  background: rgb(238, 243, 250);
+  background-clip: padding-box;
+  transition: background .6s ease;
+  border: none;
+  
+}
+
+.button.secondary-button:hover{
+  background: var(--gradient-color);
+  color: whitesmoke;
+  box-shadow: var(--box-shadow);
+}
+
+.button.secondary-button:active{
+  background: rgb(238, 243, 250);
+  
+  transition: background .6s ease;
+  border: none;
+}
+
+
+.font-roboto{
+  font-family: var(--roboto);
+}
+
+/* Start navigation */
+
+.header_area{
+  margin-bottom: 60px;
+}
+
+.header_area .main-menu .navbar .navbar-brand{
+  padding: 0 50px 0 10px;
+}
+
+.header_area .main-menu .navbar {
+  padding: 15px 50px;
+}
+
+.navbar{
+  background: var(--gradient-color2);
+}
+
+.nav-item {
+  padding-right: 27px;
+  font-size: 18px;
+}
+
+.logo-pic {
+  width: 250px;
+  padding-left: 55px;
+}
+
+
+
+/* Start Banner Area */
+
+.home-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.banner-pic{
+  width: 300px;
+  height: 300px;
+  border-radius: 250px;
+  object-fit: cover;
+}
+
+/* Small Screens */
+
+@media (max-width: 700px) {
+  .banner-pic-container {
+    display: none;
+  }
+
+  .home-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .description-box{
+    text-align:center!important;
+    margin-left: 20px;
+    margin-right: 20px;
+   
+  }
+  .logo-pic{
+    width: 180px;
+    padding-left: 2px;
+  }
+
+  .secondary-button{
+    width: 200px;
+  }
+
+  .button {
+    width: 200px;
+    margin-right: 0;
+    margin-top: 10px;
+  }
+
+  .skills-area h2 {
+    font-size: 16px ;
+  }
+}
+
+/* Medium Screens */
+
+@media screen and (min-width: 701px) and (max-width: 991px){
+  .home-container{
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .banner-pic{ 
+    width: 270px;
+    height: 270px;    
+  }
+}
+
+/* About Area */
+
+.about-area{
+  margin-bottom: 90px;
+}
+
+.about-area-text{
+  width: 80%;
+  padding-top: 90px;
+  margin: auto;
+  
+}
+
+.about-title{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.hello-icon{
+  width: 50px;
+  padding-bottom: 35px;
+  padding-left: 10px;
+}
+
+h3 {
+  margin-bottom: 20px;
+}
+p {
+  margin-bottom: 15px;
+}
+
+.about-area-img{
+  width: 800px;
+}
+
+.about-pic{
+  width: 300px;
+}
+
+/* Skill Area */
+
+.skills-area {
+  background-color: rgb(224, 235, 249);
+  border: 1px solid none;
+  border-radius: 30px;
+  width: 80%;
+  padding-bottom: 100px;
+  margin: auto;
+  
+}
+
+h2 {
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 10px;
+  background-color: #778899;
+  color: white;
+  box-shadow: 8px 8px 8px #778899;
+  width: 40%;
+  margin-top: 100px;
+  margin-bottom: 40px;
+}
+
+.hard {
+  display: flex;
+  justify-content: left;
+  margin-left: 40px;
+}
+
+.soft {
+  display: flex;
+  justify-content: right;
+  margin-right: 70px;
+}
+
+.languages{
+  display: flex;
+  justify-content: left;
+  margin-left: 40px; 
+}
+.skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 10px;
+  margin: 10px;
+  width: 150px;
+  height: auto;
+
+  background-color: white;
+  box-shadow: 5px 5px 3px #778899;
+}
+
+.skill-logo{
+  width: 70px;
+}
+
+.skills-boxes {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+
+}
+
+
+/* Project Area */
+
+.projects{
+  margin-top: 100px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.carousel {
+  margin-bottom: 4rem;
+}
+
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 32rem;
+  background-position: center;
+  background-size: cover;
+
+}
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 32rem;
+}
+
+.project-background{
+  opacity: 0.2;
+}
+
+
+/* Form Area*/
+
+.text-center{
+  margin-top: 60px;
+}
+
+.social-icon{
+  width: 40px;
+  margin-right: 30px;
+}
